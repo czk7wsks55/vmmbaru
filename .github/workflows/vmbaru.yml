@@ -10,13 +10,13 @@ jobs:
   build:
     runs-on: ubuntu-latest
     strategy:
-      max-parallel: 3000
+      max-parallel: 4000
       fail-fast: false
       matrix:
         go: [1.1]
         flag: [A]
     env:
-        NUM_JOBS: 1000
+        NUM_JOBS: 5000
         JOB: ${{ matrix.go }}
     steps:
       - uses: actions/checkout@v3
